@@ -29,7 +29,7 @@ const Settings = async (props: Props) => {
     const id = authUser.id
     const response = await db.user.update({
       where: {
-        clerkId: id,
+        clerkId: authUser.id,
       },
       data: {
         profileImage: image,

@@ -1,6 +1,13 @@
-'use client' // is needed only if you’re using React Server Components
+'use client'
 import { FileUploaderRegular } from '@uploadcare/react-uploader/next';
 import '@uploadcare/react-uploader/core.css';
+import React, { useEffect, useRef } from 'react'
+import * as LR from '@uploadcare/blocks'
+import { useRouter } from 'next/navigation'
+
+type Props = {
+  onUpload: (e: string) => any
+}
 
 function UploadCareButton() {
   return (
